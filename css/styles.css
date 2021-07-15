@@ -1,0 +1,146 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+:root {
+    --oscuro: #222222;
+    --enfasis: #D01418;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.enfasis {
+    text-transform: capitalize;
+    color: var(--enfasis);
+}
+
+/** Header **/
+
+header {
+    background-color: var(--oscuro);
+}
+
+/** LOGO **/
+
+.logo {
+    display: flex;
+    align-items: baseline;
+    padding: 0.3rem;
+}
+
+.logo img {
+    display: inline-block;
+    box-sizing: content-box;
+    height: 1.8rem;
+    margin: 1rem 0.5rem;
+}
+
+h1 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: white;
+}
+
+header>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/** NAV **/
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    padding: 0.5rem;
+}
+
+.changuito {
+    font-size: 2rem;
+
+}
+
+/*** Body ***/
+/** Heroe **/
+.hero {
+    background: url('../img/fondo_heroe.svg') red center/100% no-repeat;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: start;
+    height: 45vh;
+
+}
+
+.hero h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.hero a {
+    display: inline-block;
+    color: white;
+    background-color: red;
+    padding: 1rem 3rem;
+    margin: 1rem auto;
+    border-radius: 0.5rem;
+
+}
+
+
+/** card **/ 
+h3 {
+    font-size: 2em;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 2rem;
+}
+.destacados {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 50%;
+    max-width: 300px;
+
+    border: 1px solid #000;
+    border-radius: 0.3rem;
+
+}
+
+.portrait {
+    margin: 2rem auto;
+}
+
+.info-pago {
+    border-top: 1px solid #000;
+}
