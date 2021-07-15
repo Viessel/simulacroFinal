@@ -14,10 +14,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-}
-
-.container {
-    max-width: 1200px;
+    background-color: #e9eaeb;
 }
 
 a {
@@ -32,7 +29,7 @@ a {
 
 /** Header **/
 
-header {
+header, footer {
     background-color: var(--oscuro);
 }
 
@@ -59,11 +56,19 @@ h1 {
 
 header>div {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
 /** NAV **/
+
+.menu-button {
+    padding: 2rem;
+}
+
+nav {
+    display: none;
+}
 
 nav ul {
     list-style-type: none;
@@ -77,20 +82,20 @@ nav a {
 
 .changuito {
     font-size: 2rem;
-
 }
 
 /*** Body ***/
+
 /** Heroe **/
+
 .hero {
-    background: url('../img/fondo_heroe.svg') red center/100% no-repeat;
+    background: url('../img/fondo_heroe.svg') red center/cover no-repeat;
     display: flex;
     text-align: center;
     flex-direction: column;
     justify-content: center;
     justify-items: start;
     height: 45vh;
-
 }
 
 .hero h2 {
@@ -106,41 +111,149 @@ nav a {
     padding: 1rem 3rem;
     margin: 1rem auto;
     border-radius: 0.5rem;
-
 }
 
+/** card **/
 
-/** card **/ 
 h3 {
     font-size: 2em;
     text-align: center;
     text-transform: capitalize;
     margin: 2rem;
 }
+
 .destacados {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 3vw;
+    row-gap: 3vh;
 }
-
 
 .card {
     display: flex;
     flex-direction: column;
     align-content: center;
-    width: 50%;
-    max-width: 300px;
-
-    border: 1px solid #000;
-    border-radius: 0.3rem;
-
+    min-width: 200px;
+    background-color: white;
+    border-radius: 1rem;
 }
 
 .portrait {
-    margin: 2rem auto;
+    text-align: center;
+    padding: 10%;
 }
 
 .info-pago {
-    border-top: 1px solid #000;
+    border-top: 1px solid grey;
+    padding: 5%;
+}
+
+.precio {
+    font-size: 1.2rem;
+}
+
+.cuotas {
+    font-size: 0.8rem;
+    padding: 0.2rem 0rem;
+}
+
+.envio {
+    font-size: 0.6rem;
+    color: #619D00;
+}
+
+/** Seccion prod estrella**/
+
+.productos-estrella {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 3vw;
+    row-gap: 3vh;
+}
+
+.stared {
+    min-width: 330px;
+    height: 130px;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.stared-text {
+    color: white;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.sillas {
+    background: url('../img/sillas.svg') purple no-repeat center/cover;
+}
+
+.computadoras {
+    background: url('../img/computadoras.svg') purple no-repeat center/cover;
+}
+
+/** footer **/
+
+footer {
+    margin-top: 2rem;
+    color: white;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.texto-redes {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.footer-bottom {
+    background-color: #C4C4C4;
+}
+
+.derechos {
+    color: #000;
+    font-size: 0.5rem;
+    padding: 0.7rem;
+    text-align: center;
+}
+
+@media all and (min-width: 700px) /*and (orientation: portrait)*/{
+    .destacados, .productos-estrella, .footer-top {
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .footer-top {
+        justify-content: space-around;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    nav {
+        display: block;
+
+    }
 }
